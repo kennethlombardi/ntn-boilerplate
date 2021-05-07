@@ -24,7 +24,8 @@ export default {
   async asyncData({ $content, params, error }) {
     let post
     try {
-      post = await $content('events', params.project).fetch()
+      post = await $content('events', params.event).fetch()
+      console.log('EVENT', post)
     } catch (e) {
       error({ message: 'Event not found' })
     }
