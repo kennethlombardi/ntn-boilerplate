@@ -2,6 +2,7 @@ site_url: https://ntn-boilerplate.netlify.app/
 logo_url: https://ntn-boilerplate.netlify.app/icon.png
 
 publish_mode: editorial_workflow
+
 backend:
   name: git-gateway
   branch: master
@@ -68,6 +69,116 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Gallery',
+          name: 'gallery',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+  - name: 'events'
+    label: 'Events'
+    label_singular: 'Event'
+    folder: 'content/events'
+    create: true
+    format: 'json'
+    slug: '{{slug}}'
+    preview_path: 'events/{{slug}}'
+    fields:
+      - {
+          label: 'Event Phase',
+          name: 'phase',
+          widget: 'select',
+          default: 'Preflight',
+          options:
+            [
+              { label: 'Preflight', value: 'preflight' },
+              { label: 'Qualification', value: 'qualification' },
+              { label: 'Mission', value: 'mission' },
+            ],
+        }
+      - {
+          label: 'Event Element',
+          name: 'element',
+          widget: 'select',
+          default: 'N/A',
+          options:
+            [
+              { label: 'N/A', value: 'na' },
+              { label: 'Transition', value: 'transition' },
+              { label: 'Navigation', value: 'navigation' },
+              { label: 'Formation', value: 'formation' },
+            ],
+          required: false,
+        }
+      - { label: 'Block (ADT Sims Only)', name: 'block', widget: 'boolean', required: false }
+      - { label: 'Event Title', name: 'title', widget: 'string', required: true }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          default: 'Qualification',
+          options:
+            [
+              { label: 'Qualification', value: 'qualification' },
+              { label: 'Emergency Procedures', value: 'emergency_procedures' },
+              { label: 'Instrument', value: 'instrument' },
+              { label: 'Basic', value: 'basic' },
+              { label: 'Navigation', value: 'navigation' },
+              { label: 'Formation', value: 'formation' },
+              { label: 'Mission', value: 'mission' },
+            ],
+          required: true,
+        }
+      - {
+          label: 'Medium',
+          name: 'medium',
+          widget: 'select',
+          default: 'ITD',
+          options:
+            [
+              { label: 'ITD', value: 'itd' },
+              { label: 'UTD', value: 'utd' },
+              { label: 'IFT', value: 'ift' },
+              { label: 'OFT', value: 'oft' },
+              { label: 'T-6A', value: 't6a' },
+              { label: 'OFT/IFT', value: 'oftift' },
+            ],
+          required: true,
+        }
+      - {
+          label: 'Hours',
+          name: 'hours',
+          widget: 'number',
+          required: true,
+          min: 0.0,
+          max: 2.0,
+          value_type: float,
+          step: 0.1,
+        }
+      - { label: 'Objectives', name: 'objectives', widget: 'markdown', required: true }
+      - {
+          label: 'Prerequisites',
+          name: 'prerequisites',
+          widget: 'relation',
+          collection: 'events',
+          search_fields: ['title'],
+          value_field: 'title',
+          display_fields: ['title'],
+          required: false,
+        }
+      - { label: 'Milestone Window', name: 'milestone_window', widget: 'string', required: false }
+      - {
+          label: 'Page in Syllabus',
+          name: 'page_in_syllabus',
+          widget: 'number',
+          value_type: number,
+          required: true,
+          min: 0,
+          step: 1,
+        }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
       - {
           label: 'Gallery',
           name: 'gallery',
