@@ -162,6 +162,7 @@ collections:
           label: 'Prerequisites',
           name: 'prerequisites',
           widget: 'relation',
+          multiple: true,
           collection: 'events',
           search_fields: ['title'],
           value_field: 'title',
@@ -169,6 +170,84 @@ collections:
           required: false,
         }
       - { label: 'Milestone Window', name: 'milestone_window', widget: 'string', required: false }
+      - label: 'Maneuvers'
+        name: 'maneuvers'
+        widget: 'object'
+        summary: 'Maneuver Score Minimums'
+        fields:
+          - label: 'Mission Planning and Analysis'
+            name: 'mission_planning_and_analysis'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - {
+                  label: 'Mission Planning',
+                  name: 'mission_planning',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Mission Products',
+                  name: 'mission_products',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Briefing',
+                  name: 'briefing',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Contingency Analysis',
+                  name: 'contingency_analysis',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
       - {
           label: 'Page in Syllabus',
           name: 'page_in_syllabus',
