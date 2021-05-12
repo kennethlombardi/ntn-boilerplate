@@ -112,7 +112,6 @@ collections:
             ],
           required: false,
         }
-      - { label: 'Block (ADT Sims Only)', name: 'block', widget: 'boolean', required: false }
       - { label: 'Event Title', name: 'title', widget: 'string', required: true }
       - {
           label: 'Category',
@@ -248,6 +247,1292 @@ collections:
                     ],
                   required: true,
                 }
+          - label: 'Airmanship'
+            name: 'airmanship'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - {
+                  label: 'Strap in (SIM ONLY)',
+                  name: 'strap_in',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Ground operations',
+                  name: 'ground_operations',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Inflight checks',
+                  name: 'inflight_checks',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Inflight planning / profile management',
+                  name: 'inflight_planning_profile_management',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Inflight computations',
+                  name: 'inflight_computations',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Clearing / visual lookout',
+                  name: 'clearing_visual_lookout',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Communication',
+                  name: 'communication',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Situational awareness',
+                  name: 'situational_awareness',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Task management',
+                  name: 'task_management',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Decision making',
+                  name: 'decision_making',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Risk management',
+                  name: 'risk_management',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Inflight adaptability (contingencies)',
+                  name: 'inflight_adaptability_contingencies',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Emergency procedures',
+                  name: 'emergency_procedures',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'General knowledge',
+                  name: 'general_knowledge',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+          - label: 'Basic Aircraft Control'
+            name: 'basic_aircraft_control'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - {
+                  label: 'Cross-check',
+                  name: 'cross_check',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Trim use',
+                  name: 'trim_use',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Airspeed control',
+                  name: 'airspeed_control',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Altitude control',
+                  name: 'altitude_control',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Heading control',
+                  name: 'heading_control',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Level off',
+                  name: 'level_off',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+          - label: 'Flying Fundamentals'
+            name: 'flying_fundamentals'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - {
+                  label: 'Takeoff - single ship',
+                  name: 'takeoff_single_ship',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Departure - lead / single ship',
+                  name: 'departure_lead_single_ship',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Enroute descent',
+                  name: 'enroute_descent',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Normal landing',
+                  name: 'normal_landing',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'No-flap landing',
+                  name: 'no_flap_landing',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Night landing',
+                  name: 'night_landing',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+          - label: 'MOA Maneuvering'
+            name: 'moa_maneuvering'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - label: 'Basic manuvering'
+                name: 'basic_maneuvering'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Area orientation and planning',
+                      name: 'area_orientation_and_planning',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'G-awareness exercise',
+                      name: 'g_awareness_exercise',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Slow flight',
+                      name: 'slow_flight',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Power on stalls',
+                      name: 'power_on_stalls',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Traffic pattern stalls',
+                      name: 'traffic_pattern_stalls',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Recovery from spin',
+                      name: 'recovery_from_spin',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Nose-high recovery',
+                      name: 'nose_high_recovery',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Nose-low recovery',
+                      name: 'nose_low_recovery',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Vertical S',
+                      name: 'vertical_s',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Steep turns',
+                      name: 'steep_turns',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Unusual attitude recoveries',
+                      name: 'unusual_attitude_recoveries',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+              - label: 'Aerobatic Maneuvering'
+                name: 'aerobatic_maneuvering'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Aileron roll',
+                      name: 'aileron_roll',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Loop',
+                      name: 'loop',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Split S',
+                      name: 'split_s',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Lazy eight',
+                      name: 'lazy_eight',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Cloverleaf',
+                      name: 'cloverleaf',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Immelmann',
+                      name: 'immelmann',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Barrel roll',
+                      name: 'barrel_roll',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Cuban eight',
+                      name: 'cuban_eight',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+          - label: 'VFR Pattern Operations'
+            name: 'vfr_pattern_operations'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - {
+                  label: 'Local recovery',
+                  name: 'local_recovery',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'VFR traffic entry (lead/single ship)',
+                  name: 'vfr_traffic_entry_lead_single_ship',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'RSU procedures',
+                  name: 'rsu_procedures',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Breakout/reentry',
+                  name: 'breakout_reentry',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Normal overhead',
+                  name: 'normal_overhead',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'No-flap overhead',
+                  name: 'no_flap_overhead',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Closed pattern',
+                  name: 'closed_pattern',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'VFR straight-in',
+                  name: 'vfr_straight_in',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'VFR no-flap straight-in',
+                  name: 'vfr_no_flap_straight_in',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Go-around',
+                  name: 'go_around',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'High-altitude power loss (HAPL) (SIM ONLY)',
+                  name: 'high_altitude_power_loss_hapl_sim_only',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'Emergency landing pattern (ELP',
+                  name: 'emergency_landing_pattern',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+              - {
+                  label: 'ELP landing',
+                  name: 'elp_landing',
+                  widget: 'select',
+                  default: 'NONE',
+                  options:
+                    [
+                      { label: 'NONE', value: 'NONE' },
+                      { label: '2', value: '2' },
+                      { label: '2+', value: '2+' },
+                      { label: '3', value: '3' },
+                      { label: '3+', value: '3+' },
+                      { label: '4', value: '4' },
+                      { label: '4+', value: '4+' },
+                    ],
+                  required: true,
+                }
+          - label: 'Navigation'
+            name: 'navigation'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - label: 'Instrument Procedures'
+                name: 'instrument_procedures'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Outbase procedures (FLIGHT ONLY)',
+                      name: 'outbase_procedures_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'GPS navigation',
+                      name: 'gps_navigation',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Ground based Navaid navigation',
+                      name: 'ground_based_navaid_navigation',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Intercept / maintain course',
+                      name: 'intercept_maintain_course',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Intercept / maintain arc',
+                      name: 'intercept_maintain_arc',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Visual straight-in',
+                      name: 'visual_straight_in',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Holding',
+                      name: 'holding',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Instrument approach (vectors)',
+                      name: 'instrument_approach_vectors',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Instrument approach (full procedure)',
+                      name: 'instrument_approach_full_procedure',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'VOR final',
+                      name: 'VOR final',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Localizer final',
+                      name: 'localizer_final',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'GPS final',
+                      name: 'gps_final',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'ILS final',
+                      name: 'ils_final',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'PAR final',
+                      name: 'par_final',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'ASR final',
+                      name: 'asr_final',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
       - {
           label: 'Page in Syllabus',
           name: 'page_in_syllabus',
