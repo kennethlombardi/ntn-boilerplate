@@ -1,0 +1,109 @@
+{
+  "page_in_syllabus": 33,
+  "hours": 2,
+  "medium": "utd",
+  "title": "Title",
+  "objectives": "Objectives",
+  "maneuvers": {
+    "mission_planning_and_analysis": {
+      "mission_planning": "2",
+      "mission_products": "NONE",
+      "briefing": "NONE",
+      "contingency_analysis": "NONE"
+    },
+    "airmanship": {
+      "inflight_adaptability_contingencies": "NONE",
+      "ground_operations": "NONE",
+      "strap_in": "NONE",
+      "general_knowledge": "NONE",
+      "decision_making": "NONE",
+      "emergency_procedures": "NONE",
+      "inflight_planning_profile_management": "NONE",
+      "risk_management": "NONE",
+      "inflight_checks": "NONE",
+      "inflight_computations": "NONE",
+      "communication": "NONE",
+      "clearing_visual_lookout": "NONE",
+      "task_management": "NONE",
+      "situational_awareness": "NONE"
+    },
+    "basic_aircraft_control": {
+      "cross_check": "NONE",
+      "trim_use": "NONE",
+      "airspeed_control": "NONE",
+      "altitude_control": "NONE",
+      "heading_control": "NONE",
+      "level_off": "NONE"
+    },
+    "flying_fundamentals": {
+      "takeoff_single_ship": "NONE",
+      "departure_lead_single_ship": "NONE",
+      "enroute_descent": "NONE",
+      "normal_landing": "NONE",
+      "no_flap_landing": "NONE",
+      "night_landing": "NONE"
+    },
+    "moa_maneuvering": {
+      "basic_maneuvering": {
+        "traffic_pattern_stalls": "NONE",
+        "steep_turns": "NONE",
+        "nose_high_recovery": "NONE",
+        "area_orientation_and_planning": "NONE",
+        "vertical_s": "NONE",
+        "nose_low_recovery": "NONE",
+        "recovery_from_spin": "NONE",
+        "slow_flight": "NONE",
+        "unusual_attitude_recoveries": "NONE",
+        "power_on_stalls": "NONE",
+        "g_awareness_exercise": "NONE"
+      },
+      "aerobatic_maneuvering": {
+        "aileron_roll": "NONE",
+        "loop": "NONE",
+        "split_s": "NONE",
+        "lazy_eight": "NONE",
+        "cloverleaf": "NONE",
+        "immelmann": "NONE",
+        "barrel_roll": "NONE",
+        "cuban_eight": "NONE"
+      }
+    },
+    "vfr_pattern_operations": {
+      "no_flap_overhead": "NONE",
+      "elp_landing": "NONE",
+      "vfr_no_flap_straight_in": "NONE",
+      "go_around": "NONE",
+      "local_recovery": "NONE",
+      "rsu_procedures": "NONE",
+      "normal_overhead": "NONE",
+      "vfr_straight_in": "NONE",
+      "breakout_reentry": "NONE",
+      "emergency_landing_pattern": "NONE",
+      "vfr_traffic_entry_lead_single_ship": "NONE",
+      "high_altitude_power_loss_hapl_sim_only": "NONE",
+      "closed_pattern": "NONE"
+    },
+    "navigation": {
+      "instrument_procedures": {
+        "localizer_final": "NONE",
+        "gps_final": "NONE",
+        "instrument_approach_full_procedure": "NONE",
+        "holding": "NONE",
+        "ils_final": "NONE",
+        "gps_navigation": "NONE",
+        "visual_straight_in": "NONE",
+        "VOR final": "NONE",
+        "instrument_approach_vectors": "NONE",
+        "intercept_maintain_course": "NONE",
+        "ground_based_navaid_navigation": "NONE",
+        "asr_final": "NONE",
+        "par_final": "NONE",
+        "intercept_maintain_arc": "NONE",
+        "outbase_procedures_flight_only": "NONE"
+      }
+    }
+  },
+  "phase": "preflight",
+  "element": "transition",
+  "category": "emergency_procedures"
+}
