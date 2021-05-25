@@ -1433,7 +1433,7 @@ collections:
                     }
                   - {
                       label: 'VOR final',
-                      name: 'VOR final',
+                      name: 'vor_final',
                       widget: 'select',
                       default: 'NONE',
                       options:
