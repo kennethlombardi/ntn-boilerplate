@@ -1533,6 +1533,891 @@ collections:
                         ],
                       required: true,
                     }
+                  - {
+                      label: 'No-gyro final',
+                      name: 'no_gyro_final',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Circling approach',
+                      name: 'circling_approach',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Missed approach',
+                      name: 'missed_approach',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Transition to landing',
+                      name: 'transition_to_landing',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Night transition to landing',
+                      name: 'night_transition_to_landing',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+              - label: 'VFR Procedures'
+                name: 'vfr_procedures'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'VFR departure (non local)',
+                      name: 'vfr_departure_non_local',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'VFR navigation',
+                      name: 'vfr_navigation',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'VFR arrival',
+                      name: 'vfr_arrival',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+              - label: 'Low level (FLIGHT ONLY)'
+                name: 'low_level_flight_only'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Route entry - lead/single ship (FLIGHT ONLY)',
+                      name: 'route_entry_lead_single_ship_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Low level time control (FLIGHT ONLY)',
+                      name: 'low_level_time_control_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Low level course maintenance (FLIGHT ONLY)',
+                      name: 'low_level_course_maintenance_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Low level chart reading (FLIGHT ONLY)',
+                      name: 'low_level_chart_reading_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Route exit/abort-lead/single ship (FLIGHT ONLY)',
+                      name: 'route_exit_abort_lead_single_ship_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+          - label: 'Formation (FLIGHT ONLY)'
+            name: 'formation_flight_only'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - label: 'Basic Formation (all) (FLIGHT ONLY)'
+                name: 'basic_formation_all_flight_only'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Visual signals (FLIGHT ONLY)',
+                      name: 'visual_signals_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Position change (FLIGHT ONLY)',
+                      name: 'position_change_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Flight split (FLIGHT ONLY)',
+                      name: 'flight_split_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Battle damage check (FLIGHT ONLY)',
+                      name: 'battle_damage_check_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+              - label: 'Basic Formation (lead) (FLIGHT ONLY)'
+                name: 'basic_formation_lead_flight_only'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Formation takeoff (lead) (FLIGHT ONLY)',
+                      name: 'formation_takeof_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: '2-ship enroute navigation (lead) (FLIGHT ONLY)',
+                      name: 'two_ship_enroute_navigation_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Rejoin (lead) (FLIGHT ONLY)',
+                      name: 'rejoin_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Extended trail - level 2 (lead) (FLIGHT ONLY)',
+                      name: 'extended_trail_level_two_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Extended trail - level 3 (lead) (FLIGHT ONLY)',
+                      name: 'extended_trail_level_three_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Wingwork / close trail (lead) (FLIGHT ONLY)',
+                      name: 'wingwork_close_trail_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Echelon (lead) (FLIGHT ONLY)',
+                      name: 'echelon_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Lost wingman (lead) (FLIGHT ONLY)',
+                      name: 'lost_wingman_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Formation approach (lead) (FLIGHT ONLY)',
+                      name: 'formation_approach_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Formation landing (lead) (FLIGHT ONLY)',
+                      name: 'formation_landing_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+              - label: 'Wing takeoff (wing) (FLIGHT ONLY)'
+                name: 'wing_takeoff_wing_flight_only'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Interval takeoff (wing) (FLIGHT ONLY)',
+                      name: 'interval_takeoff_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Formation navigation procedures (wing) (FLIGHT ONLY)',
+                      name: 'formation_navigation_procedures_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Fingertip - enroute (wing) (FLIGHT ONLY)',
+                      name: 'fingertip_enroute_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Wingwork - level 1 and 2 (wing) (FLIGHT ONLY)',
+                      name: 'wingwork_level_one_and_two_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Wingwork - level 3 (wing) (FLIGHT ONLY)',
+                      name: 'wingwork_level_three_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Close trail (wing) (FLIGHT ONLY)',
+                      name: 'close_trail_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Route (wing) (FLIGHT ONLY)',
+                      name: 'route_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Fighting wing (wing) (FLIGHT ONLY)',
+                      name: 'fighting_wing_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Echelon (wing) (FLIGHT ONLY)',
+                      name: 'echelon_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Lost wingman (wing) (FLIGHT ONLY)',
+                      name: 'lost_wingman_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Crossunder (wing)',
+                      name: 'crossunder_wing',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Pitchout (wing) (FLIGHT ONLY)',
+                      name: 'pitchout_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Turning rejoin (wing) (FLIGHT ONLY)',
+                      name: 'turning_rejoin_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Straight-ahead rejoin (wing) (FLIGHT ONLY)',
+                      name: 'straight_ahead_rejoin_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Overshoot (wing) (FLIGHT ONLY)',
+                      name: 'overshoot_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Breakout (wing) (FLIGHT ONLY)',
+                      name: 'breakout_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Extended trail - level 1 (wing) (FLIGHT ONLY)',
+                      name: 'extended_trail_level_one_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Extended trail - level 2 (wing) (FLIGHT ONLY)',
+                      name: 'extended_trail_level_two_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Extended trail - level 3 (wing) (FLIGHT ONLY)',
+                      name: 'extended_trail_level_three_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Formation approach (wing) (FLIGHT ONLY)',
+                      name: 'formation_approach_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Formation landing (wing) (FLIGHT ONLY)',
+                      name: 'formation_landing_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+              - label: 'Mission (FLIGHT ONLY)'
+                name: 'mission_flight_only'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - {
+                      label: 'Enroute rendezvous-tanker (lead) (FLIGHT ONLY)',
+                      name: 'enroute_rendezvous_tanker_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Enroute rendezvous-receiver (lead) (FLIGHT ONLY)',
+                      name: 'enroute_rendezvous_receiver_lead_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
       - {
           label: 'Page in Syllabus',
           name: 'page_in_syllabus',
