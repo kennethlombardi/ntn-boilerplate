@@ -4,7 +4,7 @@
   "element": "na",
   "title": "Local Instrument Recoveries (Part-task)",
   "category": "instrument",
-  "medium": "ITD",
+  "medium": "itd",
   "hours": 0.7,
   "objectives": "Objectives — Introduce Instrument Recovery Procedures\r\n1. This is an extension of the previous introduction to departures/recoveries and the ILS as a form of straight in. Students will fly a local departure through the weather, then prepare for an instrument recovery. Fly one recovery from the MOA through completion. Fly the other as a part task from vectors to final. Introduce a contact approach to a restricted pattern if time allows. The focus should be on situational awareness, instrument procedures and pacing for the designated recovery (dogleg, course intercept, configure and descend), and communication. Students should come prepared with knowledge of how to use the HOTAS to control navaids and displays in the ITD.",
   "prerequisites": [],
