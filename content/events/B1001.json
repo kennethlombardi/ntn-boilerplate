@@ -11,10 +11,10 @@
   "page_in_syllabus": 37,
   "maneuvers": {
     "mission_planning_and_analysis": {
-      "mission_planning": 2,
-      "mission_products": 2,
-      "briefing": 2,
-      "contingency_analysis": 2
+      "mission_planning": "2",
+      "mission_products": "2",
+      "briefing": "2",
+      "contingency_analysis": "2"
     },
     "airmanship": {
       "strap_in_sim_only": "2+",
@@ -22,18 +22,18 @@
       "inflight_checks": "NONE",
       "inflight_planning_profile_management": "NONE",
       "inflight_computations": "NONE",
-      "clearing_visual_lookout": 2,
-      "communication": 2,
-      "situational_awareness": 2,
-      "task_management": 2,
-      "decision_making": 2,
-      "risk_management": 2,
+      "clearing_visual_lookout": "2",
+      "communication": "2",
+      "situational_awareness": "2",
+      "task_management": "2",
+      "decision_making": "2",
+      "risk_management": "2",
       "inflight_adaptability_contingencies": "NONE",
-      "emergency_procedures": 2,
-      "general_knowledge": 2
+      "emergency_procedures": "2",
+      "general_knowledge": "2"
     },
     "basic_aircraft_control": {
-      "cross_check": 2,
+      "cross_check": "2",
       "trim_use": "NONE",
       "airspeed_control": "NONE",
       "altitude_control": "NONE",

@@ -17,12 +17,12 @@
       "contingency_analysis": "2+"
     },
     "airmanship": {
-      "strap_in_sim_only": 3,
-      "ground_operations": 3,
+      "strap_in_sim_only": "3",
+      "ground_operations": "3",
       "inflight_checks": "3+",
       "inflight_planning_profile_management": "3+",
       "inflight_computations": "3+",
-      "clearing_visual_lookout": 3,
+      "clearing_visual_lookout": "3",
       "communication": "3+",
       "situational_awareness": "3+",
       "task_management": "3+",
@@ -43,8 +43,8 @@
     "flying_fundamentals": {
       "takeoff_single_ship": "3+",
       "departure_lead_single_ship": "3+",
-      "enroute_descent": 3,
-      "normal_landing": 3,
+      "enroute_descent": "3",
+      "normal_landing": "3",
       "no_flap_landing": "2+",
       "night_landing": "NONE"
     },
@@ -61,7 +61,7 @@
         "nose_low_recovery": "NONE",
         "vertical_s": "NONE",
         "steep_turns": "NONE",
-        "unusual_attitude_recoveries": 3
+        "unusual_attitude_recoveries": "3"
       },
       "aerobatic_maneuvering": {
         "aileron_roll": "NONE",
@@ -76,15 +76,15 @@
     },
     "vfr_pattern_operations": {
       "local_recovery": "NONE",
-      "vfr_traffic_entry_lead_single_ship": 3,
+      "vfr_traffic_entry_lead_single_ship": "3",
       "rsu_procedures": "NONE",
       "breakout_reentry": "NONE",
-      "normal_overhead": 3,
-      "no_flap_overhead": 3,
-      "closed_pattern": 3,
+      "normal_overhead": "3",
+      "no_flap_overhead": "3",
+      "closed_pattern": "3",
       "vfr_straight_in": "NONE",
       "vfr_no_flap_straight_in": "NONE",
-      "go_around": 3,
+      "go_around": "3",
       "high_altitude_power_loss_hapl_sim_only": "NONE",
       "emergency_landing_pattern_elp": "NONE",
       "elp_landing": "NONE"
@@ -92,30 +92,30 @@
     "navigation": {
       "instrument_procedures": {
         "outbase_procedures_flight_only": "NONE",
-        "gps_navigation": 3,
-        "ground_based_navaid_navigation": 3,
+        "gps_navigation": "3",
+        "ground_based_navaid_navigation": "3",
         "intercept_maintain_course": "3+",
-        "intercept_maintain_arc": 3,
-        "visual_straight_in": 3,
+        "intercept_maintain_arc": "3",
+        "visual_straight_in": "3",
         "holding": "2+",
-        "instrument_approach_vectors": 3,
-        "instrument_approach_full_procedure": 3,
-        "vor_final": 3,
-        "localizer_final": 3,
-        "gps_final": 3,
-        "ils_final": 3,
-        "par_final": 2,
-        "asr_final": 2,
-        "no_gyro_final": 2,
-        "circling_approach": 3,
-        "missed_approach": 3,
-        "transition_to_landing": 3,
+        "instrument_approach_vectors": "3",
+        "instrument_approach_full_procedure": "3",
+        "vor_final": "3",
+        "localizer_final": "3",
+        "gps_final": "3",
+        "ils_final": "3",
+        "par_final": "2",
+        "asr_final": "2",
+        "no_gyro_final": "2",
+        "circling_approach": "3",
+        "missed_approach": "3",
+        "transition_to_landing": "3",
         "night_transition_to_landing": "2+"
       },
       "vfr_procedures": {
-        "vfr_departure_non_local": 3,
-        "vfr_navigation": 3,
-        "vfr_arrival": 3
+        "vfr_departure_non_local": "3",
+        "vfr_navigation": "3",
+        "vfr_arrival": "3"
       },
       "low_level_flight_only": {
         "route_entry_lead_single_ship_flight_only": "NONE",

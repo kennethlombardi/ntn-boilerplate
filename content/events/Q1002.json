@@ -11,24 +11,24 @@
   "page_in_syllabus": 37,
   "maneuvers": {
     "mission_planning_and_analysis": {
-      "mission_planning": 2,
-      "mission_products": 2,
-      "briefing": 2,
-      "contingency_analysis": 2
+      "mission_planning": "2",
+      "mission_products": "2",
+      "briefing": "2",
+      "contingency_analysis": "2"
     },
     "airmanship": {
-      "strap_in_sim_only": 2,
-      "ground_operations": 2,
+      "strap_in_sim_only": "2",
+      "ground_operations": "2",
       "inflight_checks": "2+",
-      "inflight_planning_profile_management": 2,
-      "inflight_computations": 2,
-      "clearing_visual_lookout": 2,
-      "communication": 2,
+      "inflight_planning_profile_management": "2",
+      "inflight_computations": "2",
+      "clearing_visual_lookout": "2",
+      "communication": "2",
       "situational_awareness": "2+",
       "task_management": "2+",
-      "decision_making": 2,
+      "decision_making": "2",
       "risk_management": "2+",
-      "inflight_adaptability_contingencies": 2,
+      "inflight_adaptability_contingencies": "2",
       "emergency_procedures": "2+",
       "general_knowledge": "2+"
     },
@@ -41,16 +41,16 @@
       "level_off": "2+"
     },
     "flying_fundamentals": {
-      "takeoff_single_ship": 2,
-      "departure_lead_single_ship": 2,
-      "enroute_descent": 2,
-      "normal_landing": 2,
+      "takeoff_single_ship": "2",
+      "departure_lead_single_ship": "2",
+      "enroute_descent": "2",
+      "normal_landing": "2",
       "no_flap_landing": "NONE",
       "night_landing": "NONE"
     },
     "moa_maneuvering": {
       "basic_maneuvering": {
-        "area_orientation_and_planning": 2,
+        "area_orientation_and_planning": "2",
         "g_awareness_exercise": "NONE",
         "slow_flight": "2+",
         "power_on_stalls": "NONE",
@@ -75,7 +75,7 @@
       }
     },
     "vfr_pattern_operations": {
-      "local_recovery": 2,
+      "local_recovery": "2",
       "vfr_traffic_entry_lead_single_ship": "NONE",
       "rsu_procedures": "NONE",
       "breakout_reentry": "NONE",
@@ -95,8 +95,8 @@
         "gps_navigation": "2+",
         "ground_based_navaid_navigation": "2+",
         "intercept_maintain_course": "2+",
-        "intercept_maintain_arc": 2,
-        "visual_straight_in": 2,
+        "intercept_maintain_arc": "2",
+        "visual_straight_in": "2",
         "holding": "NONE",
         "instrument_approach_vectors": "NONE",
         "instrument_approach_full_procedure": "NONE",

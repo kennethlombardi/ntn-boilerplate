@@ -13,8 +13,8 @@
     "mission_planning_and_analysis": {
       "mission_planning": "3+",
       "mission_products": "3+",
-      "briefing": 3,
-      "contingency_analysis": 3
+      "briefing": "3",
+      "contingency_analysis": "3"
     },
     "airmanship": {
       "strap_in_sim_only": "NONE",
@@ -46,7 +46,7 @@
       "enroute_descent": "3+",
       "normal_landing": "4+",
       "no_flap_landing": "3+",
-      "night_landing": 2
+      "night_landing": "2"
     },
     "moa_maneuvering": {
       "basic_maneuvering": {
@@ -91,7 +91,7 @@
     },
     "navigation": {
       "instrument_procedures": {
-        "outbase_procedures_flight_only": 2,
+        "outbase_procedures_flight_only": "2",
         "gps_navigation": "3+",
         "ground_based_navaid_navigation": "3+",
         "intercept_maintain_course": "3+",
@@ -104,13 +104,13 @@
         "localizer_final": "3+",
         "gps_final": "3+",
         "ils_final": "3+",
-        "par_final": 2,
-        "asr_final": 2,
-        "no_gyro_final": 2,
+        "par_final": "2",
+        "asr_final": "2",
+        "no_gyro_final": "2",
         "circling_approach": "3+",
         "missed_approach": "3+",
         "transition_to_landing": "3+",
-        "night_transition_to_landing": 2
+        "night_transition_to_landing": "2"
       },
       "vfr_procedures": {
         "vfr_departure_non_local": "3+",
@@ -129,25 +129,25 @@
       "basic_formation_all_flight_only": {
         "visual_signals_flight_only": "3+",
         "position_change_flight_only": "3+",
-        "flight_split_flight_only": 2,
+        "flight_split_flight_only": "2",
         "battle_damage_check_flight_only": "3+"
       },
       "basic_formation_lead_flight_only": {
         "formation_takeoff_lead_flight_only": "3+",
-        "two_ship_enroute_navigation_lead_flight_only": 2,
+        "two_ship_enroute_navigation_lead_flight_only": "2",
         "rejoin_lead_flight_only": "3+",
         "extended_trail_level_two_lead_flight_only": "3+",
-        "extended_trail_level_three_lead_flight_only": 3,
+        "extended_trail_level_three_lead_flight_only": "3",
         "wingwork_close_trail_lead_flight_only": "3+",
         "echelon_lead_flight_only": "3+",
         "lost_wingman_lead_flight_only": "3+",
-        "formation_approach_lead_flight_only": 2,
-        "formation_landing_lead_flight_only": 2
+        "formation_approach_lead_flight_only": "2",
+        "formation_landing_lead_flight_only": "2"
       },
       "basic_formation_wing_flight_only": {
         "wing_takeoff_wing_flight_only": "3+",
         "interval_takeoff_wing_flight_only": "3+",
-        "formation_navigation_procedures_wing_flight_only": 2,
+        "formation_navigation_procedures_wing_flight_only": "2",
         "fingertip_enroute_wing_flight_only": "3+",
         "wingwork_level_one_and_two_wing_flight_only": "3+",
         "wingwork_level_three_wing_flight_only": "3+",
@@ -164,9 +164,9 @@
         "breakout_wing_flight_only": "3+",
         "extended_trail_level_one_wing_flight_only": "3+",
         "extended_trail_level_two_wing_flight_only": "3+",
-        "extended_trail_level_three_wing_flight_only": 3,
-        "formation_approach_wing_flight_only": 2,
-        "formation_landing_wing_flight_only": 2
+        "extended_trail_level_three_wing_flight_only": "3",
+        "formation_approach_wing_flight_only": "2",
+        "formation_landing_wing_flight_only": "2"
       },
       "mission_flight_only": {
         "enroute_rendezvous_tanker_lead_flight_only": "NONE",
