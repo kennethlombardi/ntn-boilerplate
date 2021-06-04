@@ -1,9 +1,9 @@
 {
   "name": "Q6104",
   "phase": "preflight",
-  "element": "N/A",
+  "element": "na",
   "title": "Local Pattern References and Visual Patterns",
-  "category": "Qualification",
+  "category": "qualification",
   "medium": "ITD",
   "hours": 0.7,
   "objectives": "Introduction to composite BAC maneuvers.\r\nStudents practice TP and power-on stalls and abnormal flight recoveries with emphasis on control and performance concepts to comply with 11-248 maneuver objectives and procedures.\r\nIf student proficiency allows and sufficient General Knowledge is demonstrated in the brief, introduce basic aerobatics.",

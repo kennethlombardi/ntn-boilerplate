@@ -2,7 +2,7 @@
   "name": "N2101",
   "phase": "mission",
   "title": "Advanced IFR Navigation Training",
-  "category": "Navigation",
+  "category": "navigation",
   "medium": "IFT",
   "hours": 1.3,
   "objectives": "Objective — Demonstrate required proficiency on navigation procedures while managing contingencies simulating real-world/real-time changes to the planned mission per the SSRs. All profiles should be conducted from off- station to other off-station locations. Limit the use of the part-task features of the simulator (freeze, playback, reinitializing), slew should be used when long transit times decrease training opportunities.\r\nNote: Instructors should tailor these profiles to the specific problem areas the student may be experiencing on flight profiles. Students should also strive to practice in the ITD, especially using PilotEdge, in addition to these simulators.\r\nSpecial Syllabus Requirements\r\n1. Fly one sortie under night conditions\r\n2. Practice wind shear recovery.\r\n3. See the SSR chart for all requirements. These SSRs expose the student to a variety of “non-standard” occurrences, such as unclear/incomplete clearances, excessive radio chatter, unplanned holding, runway changes, divert scenarios, non-standard vectors,etc.\r\nNote: The student should still be able to perform the required instrument procedures to MIF while responding to these realistic changing scenarios.",

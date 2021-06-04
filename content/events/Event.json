@@ -1,9 +1,9 @@
 {
   "name": "Event",
   "phase": "phase",
-  "element": "Element",
+  "element": "element",
   "title": "Event Title",
-  "category": "Category",
+  "category": "category",
   "medium": "Medium",
   "hours": "Hours",
   "objectives": "Objectives",

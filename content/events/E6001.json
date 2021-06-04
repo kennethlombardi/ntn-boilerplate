@@ -1,9 +1,9 @@
 {
   "name": "E6001",
   "phase": "preflight",
-  "element": "N/A",
+  "element": "na",
   "title": "Emergency Procedures (Part-Task)",
-  "category": "Emergency Procedures",
+  "category": "emergency procedures",
   "medium": "ITD",
   "hours": 1,
   "objectives": "Objective — Introduce ELP and HAPL procedures. Accomplish the following:\r\nIntroduce students to basic TCCC (PEL) considerations and HAPL math\r\nIntroduce students to ELP procedures from High Key",

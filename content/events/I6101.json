@@ -1,9 +1,9 @@
 {
   "name": "I6101",
   "phase": "qualification",
-  "element": "Transition",
+  "element": "transition",
   "title": "Intermediate Instruments",
-  "category": "Instrument",
+  "category": "instrument",
   "medium": "ITD",
   "hours": 1,
   "objectives": "Objective — Introduce Instrument concepts for circling approaches. Students should be exposed to multiple circling and missed approach scenarios.\r\nNotes: Use part task features to increase exposure to a variety of scenarios and runways setups relevant to circling.",

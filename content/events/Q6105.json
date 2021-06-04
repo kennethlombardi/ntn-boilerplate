@@ -1,9 +1,9 @@
 {
   "name": "Q6105",
   "phase": "preflight",
-  "element": "N/A",
+  "element": "na",
   "title": "Local Pattern References and Visual Patterns",
-  "category": "Qualification",
+  "category": "qualification",
   "medium": "ITD",
   "hours": 0.7,
   "objectives": "Introduction to aerobatic maneuvers.\r\nEmphasize entry parameters, set-up within MOA, flowing maneuvers together (energy management), crosscheck of parameters and where to use rudder.",

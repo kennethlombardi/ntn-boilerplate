@@ -1,9 +1,9 @@
 {
   "name": "Q3002",
   "phase": "preflight",
-  "element": "N/A",
+  "element": "na",
   "title": "Composite Maneuvers and Traffic Patterns",
-  "category": "Qualification",
+  "category": "qualification",
   "medium": "OFT",
   "hours": 1.3,
   "objectives": "Objectives — Build on previous simulator training while practicing Composite BAC Maneuvers and visual traffic patterns.\r\nPractice visual traffic pattern procedures (straight ins, overheads, and closed patterns as required by student proficiency) and visual reference identification.\r\nPractice traffic pattern stalls, power-on stalls and slow flight. Practice abnormal flight recoveries.",

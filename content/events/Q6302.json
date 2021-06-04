@@ -1,9 +1,9 @@
 {
   "name": "Q6302",
   "phase": "preflight",
-  "element": "N/A",
+  "element": "na",
   "title": "Qualification (PilotEdge Full Profile)",
-  "category": "Qualification",
+  "category": "qualification",
   "medium": "ITD",
   "hours": 1.5,
   "objectives": "Objectives – Students execute a full Transition profile in “real time” without the use of “pause”.",

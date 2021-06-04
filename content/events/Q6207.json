@@ -1,9 +1,9 @@
 {
   "name": "Q6207",
   "phase": "preflight",
-  "element": "N/A",
+  "element": "na",
   "title": "Visual Patterns (PilotEdge)",
-  "category": "Qualification",
+  "category": "qualification",
   "medium": "ITD",
   "hours": 0.7,
   "objectives": "Objectives — Practice the overhead/closed pattern at a local out-base incorporating standard comms via PilotEdge.\r\nAccomplish the following:\r\nLocal departure to a routine out base or aux field.\r\nMultiple VFR patterns emphasizing pattern procedures and comms. Local recovery to home field.",
