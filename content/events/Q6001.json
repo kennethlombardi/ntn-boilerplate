@@ -8,8 +8,8 @@
   "hours": 1,
   "objectives": "Objectives — Introduce basic operation of the ITD Accomplish the following:\r\nSimulator and VR program launching and setup\r\nLoading programs and plug-ins (ex: ghost aircraft, PilotEdge, linking to Foreflight)\r\nDemonstrate HOTAS mapping and a basic “how to fly it” tutorial. Familiarize students with the ITD Reference Guide\r\nSchedule multiple students per IP/ITD as required.\r\nThis event opts the student to use ITDs without an instructor.",
   "prerequisites": [
-    "PA103",
-    "FQ101"
+    "pa103",
+    "fq101"
   ],
   "page_in_syllabus": 33,
   "maneuvers": {

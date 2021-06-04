@@ -8,10 +8,10 @@
   "hours": 0.7,
   "objectives": "Introduction to local MOA departures and recoveries Students demonstrate familiarity with local departures and recoveries to the MOA, including routings, altitudes, pitch/power settings, communications, and in flight checks. The mission ends when reaching initial for the recovery runway since visual landing\r\nmaneuvers are not introduced until subsequent sims. Students much achieve enough proficiency to proceed to Pilot Edge sims.",
   "prerequisites": [
-    "Q6001",
-    "LP1-1",
-    "PB201",
-    "LM2-2"
+    "q6001",
+    "lp1-1",
+    "pb201",
+    "lm2-2"
   ],
   "page_in_syllabus": 34,
   "maneuvers": {
