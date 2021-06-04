@@ -1,0 +1,5256 @@
+{
+  "site_url": "https://ntn-boilerplate.netlify.app/",
+  "logo_url": "https://ntn-boilerplate.netlify.app/icon.png",
+  "publish_mode": "editorial_workflow",
+  "backend": {
+    "name": "git-gateway",
+    "branch": "master",
+    "squash_merges": true
+  },
+  "media_folder": "static/img",
+  "public_folder": "/img",
+  "collections": [
+    {
+      "label": "Site settings",
+      "name": "site",
+      "files": [
+        {
+          "label": "Info",
+          "name": "info",
+          "file": "content/site/info.json",
+          "format": "json",
+          "editor": {
+            "preview": false
+          },
+          "fields": [
+            {
+              "label": "Site Name",
+              "name": "sitename",
+              "widget": "string",
+              "hint": "This is used for the site title"
+            },
+            {
+              "label": "Site Description",
+              "name": "sitedescription",
+              "widget": "string",
+              "hint": "This is used as descriptive text for links that link to this site"
+            },
+            {
+              "label": "Site Language",
+              "name": "sitelang",
+              "widget": "string",
+              "pattern": [
+                "^[a-z]{2}([-])?([A-Za-z]{2})?$",
+                "Must match \"xx\" or \"xx-XX\" syntax (ex. \"en\" or \"sv-SE\")"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "blog",
+      "label": "Blog",
+      "folder": "content/blog",
+      "create": true,
+      "format": "frontmatter",
+      "slug": "{{year}}-{{month}}-{{day}}-{{slug}}",
+      "fields": [
+        {
+          "label": "Title",
+          "name": "title",
+          "widget": "string",
+          "required": true
+        },
+        {
+          "label": "Description",
+          "name": "description",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "label": "Body",
+          "name": "body",
+          "widget": "markdown",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "label": "Projects",
+      "label_singular": "Project",
+      "folder": "content/projects",
+      "create": true,
+      "format": "frontmatter",
+      "slug": "{{slug}}",
+      "preview_path": "projects/{{slug}}",
+      "fields": [
+        {
+          "label": "Project Category",
+          "name": "category",
+          "widget": "select",
+          "default": "animals",
+          "options": [
+            {
+              "label": "Animals",
+              "value": "animals"
+            },
+            {
+              "label": "Food",
+              "value": "food"
+            }
+          ]
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "widget": "string",
+          "required": true
+        },
+        {
+          "label": "Description",
+          "name": "description",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "label": "Cover Image",
+          "name": "cover",
+          "widget": "image",
+          "required": false,
+          "allow_multiple": false
+        },
+        {
+          "label": "Content",
+          "name": "body",
+          "widget": "markdown",
+          "required": false
+        },
+        {
+          "label": "Gallery",
+          "name": "gallery",
+          "widget": "list",
+          "required": false,
+          "summary": "{{fields.image}}",
+          "field": {
+            "label": "Image",
+            "name": "image",
+            "widget": "image"
+          }
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "label": "Events",
+      "label_singular": "Event",
+      "folder": "content/events",
+      "create": true,
+      "format": "json",
+      "slug": "{{slug}}",
+      "preview_path": "events/{{slug}}",
+      "fields": [
+        {
+          "label": "Event Name",
+          "name": "name",
+          "widget": "string",
+          "required": true
+        },
+        {
+          "label": "Event Phase",
+          "name": "phase",
+          "widget": "select",
+          "default": "Preflight",
+          "options": [
+            {
+              "label": "Preflight",
+              "value": "preflight"
+            },
+            {
+              "label": "Qualification",
+              "value": "qualification"
+            },
+            {
+              "label": "Mission",
+              "value": "mission"
+            }
+          ]
+        },
+        {
+          "label": "Event Element",
+          "name": "element",
+          "widget": "select",
+          "default": "N/A",
+          "options": [
+            {
+              "label": "N/A",
+              "value": "na"
+            },
+            {
+              "label": "Transition",
+              "value": "transition"
+            },
+            {
+              "label": "Navigation",
+              "value": "navigation"
+            },
+            {
+              "label": "Formation",
+              "value": "formation"
+            }
+          ],
+          "required": false
+        },
+        {
+          "label": "Event Title",
+          "name": "title",
+          "widget": "string",
+          "required": true
+        },
+        {
+          "label": "Category",
+          "name": "category",
+          "widget": "select",
+          "default": "Qualification",
+          "options": [
+            {
+              "label": "Qualification",
+              "value": "qualification"
+            },
+            {
+              "label": "Emergency Procedures",
+              "value": "emergency_procedures"
+            },
+            {
+              "label": "Instrument",
+              "value": "instrument"
+            },
+            {
+              "label": "Basic",
+              "value": "basic"
+            },
+            {
+              "label": "Navigation",
+              "value": "navigation"
+            },
+            {
+              "label": "Formation",
+              "value": "formation"
+            },
+            {
+              "label": "Mission",
+              "value": "mission"
+            }
+          ],
+          "required": true
+        },
+        {
+          "label": "Medium",
+          "name": "medium",
+          "widget": "select",
+          "default": "ITD",
+          "options": [
+            {
+              "label": "ITD",
+              "value": "itd"
+            },
+            {
+              "label": "UTD",
+              "value": "utd"
+            },
+            {
+              "label": "IFT",
+              "value": "ift"
+            },
+            {
+              "label": "OFT",
+              "value": "oft"
+            },
+            {
+              "label": "T-6A",
+              "value": "t6a"
+            },
+            {
+              "label": "OFT/IFT",
+              "value": "oftift"
+            }
+          ],
+          "required": true
+        },
+        {
+          "label": "Hours",
+          "name": "hours",
+          "widget": "number",
+          "required": true,
+          "min": 0,
+          "max": 2,
+          "value_type": "float",
+          "step": 0.1
+        },
+        {
+          "label": "Objectives",
+          "name": "objectives",
+          "widget": "markdown",
+          "required": true
+        },
+        {
+          "label": "Prerequisites",
+          "name": "prerequisites",
+          "widget": "relation",
+          "multiple": true,
+          "collection": "events",
+          "search_fields": ["title"],
+          "value_field": "title",
+          "display_fields": ["title"],
+          "required": false
+        },
+        {
+          "label": "Maneuvers",
+          "name": "maneuvers",
+          "widget": "object",
+          "summary": "Maneuver Score Minimums",
+          "fields": [
+            {
+              "label": "Mission Planning and Analysis",
+              "name": "mission_planning_and_analysis",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Mission Planning",
+                  "name": "mission_planning",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Mission Products",
+                  "name": "mission_products",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Briefing",
+                  "name": "briefing",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Contingency Analysis",
+                  "name": "contingency_analysis",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                }
+              ]
+            },
+            {
+              "label": "Airmanship",
+              "name": "airmanship",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Strap in (SIM ONLY)",
+                  "name": "strap_in_sim_only",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Ground operations",
+                  "name": "ground_operations",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Inflight checks",
+                  "name": "inflight_checks",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Inflight planning / profile management",
+                  "name": "inflight_planning_profile_management",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Inflight computations",
+                  "name": "inflight_computations",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Clearing / visual lookout",
+                  "name": "clearing_visual_lookout",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Communication",
+                  "name": "communication",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Situational awareness",
+                  "name": "situational_awareness",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Task management",
+                  "name": "task_management",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Decision making",
+                  "name": "decision_making",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Risk management",
+                  "name": "risk_management",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Inflight adaptability (contingencies)",
+                  "name": "inflight_adaptability_contingencies",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Emergency procedures",
+                  "name": "emergency_procedures",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "General knowledge",
+                  "name": "general_knowledge",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                }
+              ]
+            },
+            {
+              "label": "Basic Aircraft Control",
+              "name": "basic_aircraft_control",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Cross-check",
+                  "name": "cross_check",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Trim use",
+                  "name": "trim_use",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Airspeed control",
+                  "name": "airspeed_control",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Altitude control",
+                  "name": "altitude_control",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Heading control",
+                  "name": "heading_control",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Level off",
+                  "name": "level_off",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                }
+              ]
+            },
+            {
+              "label": "Flying Fundamentals",
+              "name": "flying_fundamentals",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Takeoff - single ship",
+                  "name": "takeoff_single_ship",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Departure - lead / single ship",
+                  "name": "departure_lead_single_ship",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Enroute descent",
+                  "name": "enroute_descent",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Normal landing",
+                  "name": "normal_landing",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "No-flap landing",
+                  "name": "no_flap_landing",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Night landing",
+                  "name": "night_landing",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                }
+              ]
+            },
+            {
+              "label": "MOA Maneuvering",
+              "name": "moa_maneuvering",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Basic manuvering",
+                  "name": "basic_maneuvering",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Area orientation and planning",
+                      "name": "area_orientation_and_planning",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "G-awareness exercise",
+                      "name": "g_awareness_exercise",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Slow flight",
+                      "name": "slow_flight",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Power on stalls",
+                      "name": "power_on_stalls",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Traffic pattern stalls",
+                      "name": "traffic_pattern_stalls",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Inverted recovery",
+                      "name": "inverted_recovery",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Recovery from spin / OCF",
+                      "name": "recovery_from_spin_ocf",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Nose-high recovery",
+                      "name": "nose_high_recovery",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Nose-low recovery",
+                      "name": "nose_low_recovery",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Vertical S",
+                      "name": "vertical_s",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Steep turns",
+                      "name": "steep_turns",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Unusual attitude recoveries",
+                      "name": "unusual_attitude_recoveries",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "label": "Aerobatic Maneuvering",
+                  "name": "aerobatic_maneuvering",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Aileron roll",
+                      "name": "aileron_roll",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Loop",
+                      "name": "loop",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Split S",
+                      "name": "split_s",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Lazy eight",
+                      "name": "lazy_eight",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Cloverleaf",
+                      "name": "cloverleaf",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Immelmann",
+                      "name": "immelmann",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Barrel roll",
+                      "name": "barrel_roll",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Cuban eight",
+                      "name": "cuban_eight",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "VFR Pattern Operations",
+              "name": "vfr_pattern_operations",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Local recovery",
+                  "name": "local_recovery",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "VFR traffic entry (lead/single ship)",
+                  "name": "vfr_traffic_entry_lead_single_ship",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "RSU procedures",
+                  "name": "rsu_procedures",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Breakout/reentry",
+                  "name": "breakout_reentry",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Normal overhead",
+                  "name": "normal_overhead",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "No-flap overhead",
+                  "name": "no_flap_overhead",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Closed pattern",
+                  "name": "closed_pattern",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "VFR straight-in",
+                  "name": "vfr_straight_in",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "VFR no-flap straight-in",
+                  "name": "vfr_no_flap_straight_in",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Go-around",
+                  "name": "go_around",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "High-altitude power loss (HAPL) (SIM ONLY)",
+                  "name": "high_altitude_power_loss_hapl_sim_only",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "Emergency landing pattern (ELP",
+                  "name": "emergency_landing_pattern_elp",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "label": "ELP landing",
+                  "name": "elp_landing",
+                  "widget": "select",
+                  "default": "NONE",
+                  "options": [
+                    {
+                      "label": "NONE",
+                      "value": "NONE"
+                    },
+                    {
+                      "label": "2",
+                      "value": "2"
+                    },
+                    {
+                      "label": "2+",
+                      "value": "2+"
+                    },
+                    {
+                      "label": "3",
+                      "value": "3"
+                    },
+                    {
+                      "label": "3+",
+                      "value": "3+"
+                    },
+                    {
+                      "label": "4",
+                      "value": "4"
+                    },
+                    {
+                      "label": "4+",
+                      "value": "4+"
+                    }
+                  ],
+                  "required": true
+                }
+              ]
+            },
+            {
+              "label": "Navigation",
+              "name": "navigation",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Instrument Procedures",
+                  "name": "instrument_procedures",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Outbase procedures (FLIGHT ONLY)",
+                      "name": "outbase_procedures_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "GPS navigation",
+                      "name": "gps_navigation",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Ground based Navaid navigation",
+                      "name": "ground_based_navaid_navigation",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Intercept / maintain course",
+                      "name": "intercept_maintain_course",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Intercept / maintain arc",
+                      "name": "intercept_maintain_arc",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Visual straight-in",
+                      "name": "visual_straight_in",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Holding",
+                      "name": "holding",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Instrument approach (vectors)",
+                      "name": "instrument_approach_vectors",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Instrument approach (full procedure)",
+                      "name": "instrument_approach_full_procedure",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "VOR final",
+                      "name": "vor_final",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Localizer final",
+                      "name": "localizer_final",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "GPS final",
+                      "name": "gps_final",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "ILS final",
+                      "name": "ils_final",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "PAR final",
+                      "name": "par_final",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "ASR final",
+                      "name": "asr_final",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "No-gyro final",
+                      "name": "no_gyro_final",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Circling approach",
+                      "name": "circling_approach",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Missed approach",
+                      "name": "missed_approach",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Transition to landing",
+                      "name": "transition_to_landing",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Night transition to landing",
+                      "name": "night_transition_to_landing",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "label": "VFR Procedures",
+                  "name": "vfr_procedures",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "VFR departure (non local)",
+                      "name": "vfr_departure_non_local",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "VFR navigation",
+                      "name": "vfr_navigation",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "VFR arrival",
+                      "name": "vfr_arrival",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "label": "Low level (FLIGHT ONLY)",
+                  "name": "low_level_flight_only",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Route entry - lead/single ship (FLIGHT ONLY)",
+                      "name": "route_entry_lead_single_ship_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Low level time control (FLIGHT ONLY)",
+                      "name": "low_level_time_control_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Low level course maintenance (FLIGHT ONLY)",
+                      "name": "low_level_course_maintenance_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Low level chart reading (FLIGHT ONLY)",
+                      "name": "low_level_chart_reading_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Route exit/abort-lead/single ship (FLIGHT ONLY)",
+                      "name": "route_exit_abort_lead_single_ship_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Formation (FLIGHT ONLY)",
+              "name": "formation_flight_only",
+              "widget": "object",
+              "collapsed": true,
+              "fields": [
+                {
+                  "label": "Basic Formation (all) (FLIGHT ONLY)",
+                  "name": "basic_formation_all_flight_only",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Visual signals (FLIGHT ONLY)",
+                      "name": "visual_signals_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Position change (FLIGHT ONLY)",
+                      "name": "position_change_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Flight split (FLIGHT ONLY)",
+                      "name": "flight_split_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Battle damage check (FLIGHT ONLY)",
+                      "name": "battle_damage_check_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "label": "Basic Formation (lead) (FLIGHT ONLY)",
+                  "name": "basic_formation_lead_flight_only",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Formation takeoff (lead) (FLIGHT ONLY)",
+                      "name": "formation_takeoff_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "2-ship enroute navigation (lead) (FLIGHT ONLY)",
+                      "name": "two_ship_enroute_navigation_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Rejoin (lead) (FLIGHT ONLY)",
+                      "name": "rejoin_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Extended trail - level 2 (lead) (FLIGHT ONLY)",
+                      "name": "extended_trail_level_two_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Extended trail - level 3 (lead) (FLIGHT ONLY)",
+                      "name": "extended_trail_level_three_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Wingwork / close trail (lead) (FLIGHT ONLY)",
+                      "name": "wingwork_close_trail_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Echelon (lead) (FLIGHT ONLY)",
+                      "name": "echelon_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Lost wingman (lead) (FLIGHT ONLY)",
+                      "name": "lost_wingman_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Formation approach (lead) (FLIGHT ONLY)",
+                      "name": "formation_approach_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Formation landing (lead) (FLIGHT ONLY)",
+                      "name": "formation_landing_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "label": "Basic Formation (wing) (FLIGHT ONLY)",
+                  "name": "basic_formation_wing_flight_only",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Wing takeoff (wing) (FLIGHT ONLY)",
+                      "name": "wing_takeoff_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Interval takeoff (wing) (FLIGHT ONLY)",
+                      "name": "interval_takeoff_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Formation navigation procedures (wing) (FLIGHT ONLY)",
+                      "name": "formation_navigation_procedures_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Fingertip - enroute (wing) (FLIGHT ONLY)",
+                      "name": "fingertip_enroute_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Wingwork - level 1 and 2 (wing) (FLIGHT ONLY)",
+                      "name": "wingwork_level_one_and_two_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Wingwork - level 3 (wing) (FLIGHT ONLY)",
+                      "name": "wingwork_level_three_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Close trail (wing) (FLIGHT ONLY)",
+                      "name": "close_trail_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Route (wing) (FLIGHT ONLY)",
+                      "name": "route_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Fighting wing (wing) (FLIGHT ONLY)",
+                      "name": "fighting_wing_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Echelon (wing) (FLIGHT ONLY)",
+                      "name": "echelon_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Lost wingman (wing) (FLIGHT ONLY)",
+                      "name": "lost_wingman_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Crossunder (wing)",
+                      "name": "crossunder_wing",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Pitchout (wing) (FLIGHT ONLY)",
+                      "name": "pitchout_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Turning rejoin (wing) (FLIGHT ONLY)",
+                      "name": "turning_rejoin_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Straight-ahead rejoin (wing) (FLIGHT ONLY)",
+                      "name": "straight_ahead_rejoin_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Overshoot (wing) (FLIGHT ONLY)",
+                      "name": "overshoot_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Breakout (wing) (FLIGHT ONLY)",
+                      "name": "breakout_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Extended trail - level 1 (wing) (FLIGHT ONLY)",
+                      "name": "extended_trail_level_one_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Extended trail - level 2 (wing) (FLIGHT ONLY)",
+                      "name": "extended_trail_level_two_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Extended trail - level 3 (wing) (FLIGHT ONLY)",
+                      "name": "extended_trail_level_three_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Formation approach (wing) (FLIGHT ONLY)",
+                      "name": "formation_approach_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Formation landing (wing) (FLIGHT ONLY)",
+                      "name": "formation_landing_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "label": "Mission (FLIGHT ONLY)",
+                  "name": "mission_flight_only",
+                  "widget": "object",
+                  "collapsed": true,
+                  "fields": [
+                    {
+                      "label": "Enroute rendezvous-tanker (lead) (FLIGHT ONLY)",
+                      "name": "enroute_rendezvous_tanker_lead_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    },
+                    {
+                      "label": "Enroute rendezvous-receiver (wing) (FLIGHT ONLY)",
+                      "name": "enroute_rendezvous_receiver_wing_flight_only",
+                      "widget": "select",
+                      "default": "NONE",
+                      "options": [
+                        {
+                          "label": "NONE",
+                          "value": "NONE"
+                        },
+                        {
+                          "label": "2",
+                          "value": "2"
+                        },
+                        {
+                          "label": "2+",
+                          "value": "2+"
+                        },
+                        {
+                          "label": "3",
+                          "value": "3"
+                        },
+                        {
+                          "label": "3+",
+                          "value": "3+"
+                        },
+                        {
+                          "label": "4",
+                          "value": "4"
+                        },
+                        {
+                          "label": "4+",
+                          "value": "4+"
+                        }
+                      ],
+                      "required": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Page in Syllabus",
+          "name": "page_in_syllabus",
+          "widget": "number",
+          "value_type": "number",
+          "required": true,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "label": "Cover Image",
+          "name": "cover",
+          "widget": "image",
+          "required": false,
+          "allow_multiple": false
+        },
+        {
+          "label": "Gallery",
+          "name": "gallery",
+          "widget": "list",
+          "required": false,
+          "summary": "{{fields.image}}",
+          "field": {
+            "label": "Image",
+            "name": "image",
+            "widget": "image"
+          }
+        }
+      ]
+    }
+  ]
+}

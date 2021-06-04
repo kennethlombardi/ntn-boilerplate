@@ -1,0 +1,177 @@
+{
+  "name": "Q6N03",
+  "phase": "Qualification",
+  "element": "Navigation",
+  "title": "PilotEdge Navigation Profiles",
+  "category": "Navigation",
+  "medium": "ITD",
+  "hours": 1,
+  "objectives": "Objective — Practice off-station navigation using the skills learned through navigation academics and N2001.\r\nNote: Due to the lack of realistic tactile interaction with instrumentation, the learning objectives of these profiles are overall mission management and in- flight planning, in-flight computations, communication with ATC, and general IFR procedures. Profiles should avoid requiring excessive Navaid changes wherever practical.\r\nSpecial Syllabus Requirements\r\nSee PilotEdge SSRs in the SSR section",
+  "prerequisites": [],
+  "page_in_syllabus": 46,
+  "maneuvers": {
+    "mission_planning_and_analysis": {
+      "mission_planning": "NONE",
+      "mission_products": "NONE",
+      "briefing": "NONE",
+      "contingency_analysis": "NONE"
+    },
+    "airmanship": {
+      "strap_in_sim_only": "NONE",
+      "ground_operations": "NONE",
+      "inflight_checks": "NONE",
+      "inflight_planning_profile_management": "NONE",
+      "inflight_computations": "NONE",
+      "clearing_visual_lookout": "NONE",
+      "communication": "NONE",
+      "situational_awareness": "NONE",
+      "task_management": "NONE",
+      "decision_making": "NONE",
+      "risk_management": "NONE",
+      "inflight_adaptability_contingencies": "NONE",
+      "emergency_procedures": "NONE",
+      "general_knowledge": "NONE"
+    },
+    "basic_aircraft_control": {
+      "cross_check": "NONE",
+      "trim_use": "NONE",
+      "airspeed_control": "NONE",
+      "altitude_control": "NONE",
+      "heading_control": "NONE",
+      "level_off": "NONE"
+    },
+    "flying_fundamentals": {
+      "takeoff_single_ship": "NONE",
+      "departure_lead_single_ship": "NONE",
+      "enroute_descent": "NONE",
+      "normal_landing": "NONE",
+      "no_flap_landing": "NONE",
+      "night_landing": "NONE"
+    },
+    "moa_maneuvering": {
+      "basic_maneuvering": {
+        "area_orientation_and_planning": "NONE",
+        "g_awareness_exercise": "NONE",
+        "slow_flight": "NONE",
+        "power_on_stalls": "NONE",
+        "traffic_pattern_stalls": "NONE",
+        "recovery_from_spin_ocf": "NONE",
+        "inverted_recovery": "NONE",
+        "nose_high_recovery": "NONE",
+        "nose_low_recovery": "NONE",
+        "vertical_s": "NONE",
+        "steep_turns": "NONE",
+        "unusual_attitude_recoveries": "NONE"
+      },
+      "aerobatic_maneuvering": {
+        "aileron_roll": "NONE",
+        "loop": "NONE",
+        "split_s": "NONE",
+        "lazy_eight": "NONE",
+        "cloverleaf": "NONE",
+        "immelmann": "NONE",
+        "barrel_roll": "NONE",
+        "cuban_eight": "NONE"
+      }
+    },
+    "vfr_pattern_operations": {
+      "local_recovery": "NONE",
+      "vfr_traffic_entry_lead_single_ship": "NONE",
+      "rsu_procedures": "NONE",
+      "breakout_reentry": "NONE",
+      "normal_overhead": "NONE",
+      "no_flap_overhead": "NONE",
+      "closed_pattern": "NONE",
+      "vfr_straight_in": "NONE",
+      "vfr_no_flap_straight_in": "NONE",
+      "go_around": "NONE",
+      "high_altitude_power_loss_hapl_sim_only": "NONE",
+      "emergency_landing_pattern_elp": "NONE",
+      "elp_landing": "NONE"
+    },
+    "navigation": {
+      "instrument_procedures": {
+        "outbase_procedures_flight_only": "NONE",
+        "gps_navigation": "NONE",
+        "ground_based_navaid_navigation": "NONE",
+        "intercept_maintain_course": "NONE",
+        "intercept_maintain_arc": "NONE",
+        "visual_straight_in": "NONE",
+        "holding": "NONE",
+        "instrument_approach_vectors": "NONE",
+        "instrument_approach_full_procedure": "NONE",
+        "vor_final": "NONE",
+        "localizer_final": "NONE",
+        "gps_final": "NONE",
+        "ils_final": "NONE",
+        "par_final": "NONE",
+        "asr_final": "NONE",
+        "no_gyro_final": "NONE",
+        "circling_approach": "NONE",
+        "missed_approach": "NONE",
+        "transition_to_landing": "NONE",
+        "night_transition_to_landing": "NONE"
+      },
+      "vfr_procedures": {
+        "vfr_departure_non_local": "NONE",
+        "vfr_navigation": "NONE",
+        "vfr_arrival": "NONE"
+      },
+      "low_level_flight_only": {
+        "route_entry_lead_single_ship_flight_only": "NONE",
+        "low_level_time_control_flight_only": "NONE",
+        "low_level_course_maintenance_flight_only": "NONE",
+        "low_level_chart_reading_flight_only": "NONE",
+        "route_exit_abort_lead_single_ship_flight_only": "NONE"
+      }
+    },
+    "formation_flight_only": {
+      "basic_formation_all_flight_only": {
+        "visual_signals_flight_only": "NONE",
+        "position_change_flight_only": "NONE",
+        "flight_split_flight_only": "NONE",
+        "battle_damage_check_flight_only": "NONE"
+      },
+      "basic_formation_lead_flight_only": {
+        "formation_takeoff_lead_flight_only": "NONE",
+        "two_ship_enroute_navigation_lead_flight_only": "NONE",
+        "rejoin_lead_flight_only": "NONE",
+        "extended_trail_level_two_lead_flight_only": "NONE",
+        "extended_trail_level_three_lead_flight_only": "NONE",
+        "wingwork_close_trail_lead_flight_only": "NONE",
+        "echelon_lead_flight_only": "NONE",
+        "lost_wingman_lead_flight_only": "NONE",
+        "formation_approach_lead_flight_only": "NONE",
+        "formation_landing_lead_flight_only": "NONE"
+      },
+      "basic_formation_wing_flight_only": {
+        "wing_takeoff_wing_flight_only": "NONE",
+        "interval_takeoff_wing_flight_only": "NONE",
+        "formation_navigation_procedures_wing_flight_only": "NONE",
+        "fingertip_enroute_wing_flight_only": "NONE",
+        "wingwork_level_one_and_two_wing_flight_only": "NONE",
+        "wingwork_level_three_wing_flight_only": "NONE",
+        "close_trail_wing_flight_only": "NONE",
+        "route_wing_flight_only": "NONE",
+        "fighting_wing_wing_flight_only": "NONE",
+        "echelon_wing_flight_only": "NONE",
+        "lost_wingman_wing_flight_only": "NONE",
+        "crossunder_wing": "NONE",
+        "pitchout_wing_flight_only": "NONE",
+        "turning_rejoin_wing_flight_only": "NONE",
+        "straight_ahead_rejoin_wing_flight_only": "NONE",
+        "overshoot_wing_flight_only": "NONE",
+        "breakout_wing_flight_only": "NONE",
+        "extended_trail_level_one_wing_flight_only": "NONE",
+        "extended_trail_level_two_wing_flight_only": "NONE",
+        "extended_trail_level_three_wing_flight_only": "NONE",
+        "formation_approach_wing_flight_only": "NONE",
+        "formation_landing_wing_flight_only": "NONE"
+      },
+      "mission_flight_only": {
+        "enroute_rendezvous_tanker_lead_flight_only": "NONE",
+        "enroute_rendezvous_receiver_wing_flight_only": "NONE"
+      }
+    }
+  }
+}

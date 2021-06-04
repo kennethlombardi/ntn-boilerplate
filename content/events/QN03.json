@@ -1,0 +1,177 @@
+{
+  "name": "QN03",
+  "phase": "Qualification",
+  "element": "Navigation",
+  "title": "Intermediate IFR / VFR Navigation",
+  "category": "Navigation",
+  "medium": "T-6A",
+  "hours": 1.7,
+  "objectives": "Objective — Introduce, practice, and demonstrate required proficiency for all phases of IFR and VFR navigation emphasizing instrument approaches during IFR training.\r\nNotes:\r\nNormally accomplished as out-and-backs and / or cross-country. Emphasis is on off station training, and exposure to a broader spectrum of instrument procedures than what was seen in the Qualification phase.\r\nUnless unusual circumstances arise, fly a maximum of two navigation sorties per day.\r\nThe instructor assigns specific training objectives based on the student’s previous performance and maneuver continuity.\r\nAttempt to accomplish each type of approach listed on the grade sheet and at least four full procedures.\r\nConduct VFR training using chosen points IAW applicable AFIs. Fly sorties no lower than 3,000 feet AGL. Students may not use the GPS on the VFR visual navigation sorties.\r\nStudents build maps and navigate using DR and pilotage procedures.\r\nTerminate VFR missions with a VFR arrival (preferably off-station) if possible. Pattern or Instrument training after the initial arrival is encouraged to expose the student to off station operations.\r\nAny of the Q4NXX sorties can be flown at night.\r\nSpecial Syllabus Requirements\r\nFly five sorties IFR with one on Victor Airways.\r\nFly a minimum of one VFR point-to-point navigation sortie.\r\nFly a minimum of eight instrument approaches. Two precision are required.\r\nSSRs in either Q4NXX or M40XX:\r\nPlan and File an out and back or X/C sortie using one DD175 for both legs File a flight plan using a DD1801\r\nPlan and Fly a SID/STAR (Plan req’d, fly desired but not req’d if unable due to ATC)\r\nFly a traditional approach using RNAV substitution for traditional Navaids until the FAF\r\nNight Requirements\r\nBefore the first night mission the IP briefs the student on problems associated with night flying with particular emphasis on spatial disorientation.\r\nAll students must accomplish a minimum of two, four desired, night landings in either Q4NXX or M40XX, the last of which must be “F” or better. The number of landings must be logged in the SSR and graded under “night landing”.",
+  "prerequisites": [],
+  "page_in_syllabus": 47,
+  "maneuvers": {
+    "mission_planning_and_analysis": {
+      "mission_planning": "3+",
+      "mission_products": "3+",
+      "briefing": 3,
+      "contingency_analysis": 3
+    },
+    "airmanship": {
+      "strap_in_sim_only": "NONE",
+      "ground_operations": "4+",
+      "inflight_checks": "4+",
+      "inflight_planning_profile_management": "3+",
+      "inflight_computations": "3+",
+      "clearing_visual_lookout": "3+",
+      "communication": "3+",
+      "situational_awareness": "3+",
+      "task_management": "3+",
+      "decision_making": "3+",
+      "risk_management": "3+",
+      "inflight_adaptability_contingencies": "3+",
+      "emergency_procedures": "4+",
+      "general_knowledge": "4+"
+    },
+    "basic_aircraft_control": {
+      "cross_check": "3+",
+      "trim_use": "4+",
+      "airspeed_control": "4+",
+      "altitude_control": "4+",
+      "heading_control": "4+",
+      "level_off": "4+"
+    },
+    "flying_fundamentals": {
+      "takeoff_single_ship": "4+",
+      "departure_lead_single_ship": "3+",
+      "enroute_descent": "3+",
+      "normal_landing": "4+",
+      "no_flap_landing": "3+",
+      "night_landing": 2
+    },
+    "moa_maneuvering": {
+      "basic_maneuvering": {
+        "area_orientation_and_planning": "3+",
+        "g_awareness_exercise": "4+",
+        "slow_flight": "4+",
+        "power_on_stalls": "4+",
+        "traffic_pattern_stalls": "4+",
+        "recovery_from_spin_ocf": "3+",
+        "inverted_recovery": "4+",
+        "nose_high_recovery": "4+",
+        "nose_low_recovery": "4+",
+        "vertical_s": "4+",
+        "steep_turns": "4+",
+        "unusual_attitude_recoveries": "4+"
+      },
+      "aerobatic_maneuvering": {
+        "aileron_roll": "3+",
+        "loop": "3+",
+        "split_s": "3+",
+        "lazy_eight": "3+",
+        "cloverleaf": "3+",
+        "immelmann": "3+",
+        "barrel_roll": "3+",
+        "cuban_eight": "3+"
+      }
+    },
+    "vfr_pattern_operations": {
+      "local_recovery": "3+",
+      "vfr_traffic_entry_lead_single_ship": "3+",
+      "rsu_procedures": "3+",
+      "breakout_reentry": "3+",
+      "normal_overhead": "3+",
+      "no_flap_overhead": "3+",
+      "closed_pattern": "3+",
+      "vfr_straight_in": "3+",
+      "vfr_no_flap_straight_in": "3+",
+      "go_around": "3+",
+      "high_altitude_power_loss_hapl_sim_only": "3+",
+      "emergency_landing_pattern_elp": "3+",
+      "elp_landing": "3+"
+    },
+    "navigation": {
+      "instrument_procedures": {
+        "outbase_procedures_flight_only": 2,
+        "gps_navigation": "3+",
+        "ground_based_navaid_navigation": "3+",
+        "intercept_maintain_course": "3+",
+        "intercept_maintain_arc": "3+",
+        "visual_straight_in": "3+",
+        "holding": "3+",
+        "instrument_approach_vectors": "3+",
+        "instrument_approach_full_procedure": "3+",
+        "vor_final": "3+",
+        "localizer_final": "3+",
+        "gps_final": "3+",
+        "ils_final": "3+",
+        "par_final": 2,
+        "asr_final": 2,
+        "no_gyro_final": 2,
+        "circling_approach": "3+",
+        "missed_approach": "3+",
+        "transition_to_landing": "3+",
+        "night_transition_to_landing": 2
+      },
+      "vfr_procedures": {
+        "vfr_departure_non_local": "3+",
+        "vfr_navigation": "3+",
+        "vfr_arrival": "3+"
+      },
+      "low_level_flight_only": {
+        "route_entry_lead_single_ship_flight_only": "3+",
+        "low_level_time_control_flight_only": "3+",
+        "low_level_course_maintenance_flight_only": "3+",
+        "low_level_chart_reading_flight_only": "3+",
+        "route_exit_abort_lead_single_ship_flight_only": "3+"
+      }
+    },
+    "formation_flight_only": {
+      "basic_formation_all_flight_only": {
+        "visual_signals_flight_only": "3+",
+        "position_change_flight_only": "3+",
+        "flight_split_flight_only": 2,
+        "battle_damage_check_flight_only": "3+"
+      },
+      "basic_formation_lead_flight_only": {
+        "formation_takeoff_lead_flight_only": "3+",
+        "two_ship_enroute_navigation_lead_flight_only": 2,
+        "rejoin_lead_flight_only": "3+",
+        "extended_trail_level_two_lead_flight_only": "3+",
+        "extended_trail_level_three_lead_flight_only": 3,
+        "wingwork_close_trail_lead_flight_only": "3+",
+        "echelon_lead_flight_only": "3+",
+        "lost_wingman_lead_flight_only": "3+",
+        "formation_approach_lead_flight_only": 2,
+        "formation_landing_lead_flight_only": 2
+      },
+      "basic_formation_wing_flight_only": {
+        "wing_takeoff_wing_flight_only": "3+",
+        "interval_takeoff_wing_flight_only": "3+",
+        "formation_navigation_procedures_wing_flight_only": 2,
+        "fingertip_enroute_wing_flight_only": "3+",
+        "wingwork_level_one_and_two_wing_flight_only": "3+",
+        "wingwork_level_three_wing_flight_only": "3+",
+        "close_trail_wing_flight_only": "3+",
+        "route_wing_flight_only": "3+",
+        "fighting_wing_wing_flight_only": "3+",
+        "echelon_wing_flight_only": "3+",
+        "lost_wingman_wing_flight_only": "3+",
+        "crossunder_wing": "3+",
+        "pitchout_wing_flight_only": "3+",
+        "turning_rejoin_wing_flight_only": "3+",
+        "straight_ahead_rejoin_wing_flight_only": "3+",
+        "overshoot_wing_flight_only": "3+",
+        "breakout_wing_flight_only": "3+",
+        "extended_trail_level_one_wing_flight_only": "3+",
+        "extended_trail_level_two_wing_flight_only": "3+",
+        "extended_trail_level_three_wing_flight_only": 3,
+        "formation_approach_wing_flight_only": 2,
+        "formation_landing_wing_flight_only": 2
+      },
+      "mission_flight_only": {
+        "enroute_rendezvous_tanker_lead_flight_only": "NONE",
+        "enroute_rendezvous_receiver_wing_flight_only": "NONE"
+      }
+    }
+  }
+}

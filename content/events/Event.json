@@ -1,0 +1,179 @@
+{
+  "name": "Event",
+  "phase": "Phase",
+  "element": "Element",
+  "title": "Event Title",
+  "category": "Category",
+  "medium": "Medium",
+  "hours": "Hours",
+  "objectives": "Objectives",
+  "prerequisites": [
+    "Prerequisites"
+  ],
+  "page_in_syllabus": "Page in Syllabus",
+  "maneuvers": {
+    "mission_planning_and_analysis": {
+      "mission_planning": "Mission planning",
+      "mission_products": "Mission products",
+      "briefing": "Briefing",
+      "contingency_analysis": "Contingency analysis"
+    },
+    "airmanship": {
+      "strap_in_sim_only": "Strap in (SIM ONLY)",
+      "ground_operations": "Ground operations",
+      "inflight_checks": "Inflight checks",
+      "inflight_planning_profile_management": "Inflight planning / profile management",
+      "inflight_computations": "Inflight computations",
+      "clearing_visual_lookout": "Clearing/visual lookout",
+      "communication": "Communication",
+      "situational_awareness": "Situational awareness",
+      "task_management": "Task management",
+      "decision_making": "Decision making",
+      "risk_management": "Risk management",
+      "inflight_adaptability_contingencies": "Inflight adaptability (contingencies)",
+      "emergency_procedures": "Emergency procedures",
+      "general_knowledge": "General knowledge"
+    },
+    "basic_aircraft_control": {
+      "cross_check": "Cross-check ",
+      "trim_use": "Trim use",
+      "airspeed_control": "Airspeed control",
+      "altitude_control": "Altitude control",
+      "heading_control": "Heading control",
+      "level_off": "Level-off"
+    },
+    "flying_fundamentals": {
+      "takeoff_single_ship": "Takeoff - single ship",
+      "departure_lead_single_ship": "Departure - lead/single ship",
+      "enroute_descent": "Enroute descent",
+      "normal_landing": "Normal landing",
+      "no_flap_landing": "No-flap landing",
+      "night_landing": "Night landing"
+    },
+    "moa_maneuvering": {
+      "basic_maneuvering": {
+        "area_orientation_and_planning": "Area orientation and planning",
+        "g_awareness_exercise": "G-awareness exercise",
+        "slow_flight": "Slow flight",
+        "power_on_stalls": "Power on stalls",
+        "traffic_pattern_stalls": "Traffic pattern stalls",
+        "recovery_from_spin_ocf": "Recovery from spin / OCF",
+        "inverted_recovery": "Inverted recovery",
+        "nose_high_recovery": "Nose-high recovery",
+        "nose_low_recovery": "Nose-low recovery",
+        "vertical_s": "Vertical S",
+        "steep_turns": "Steep turns",
+        "unusual_attitude_recoveries": "Unusual attitude recoveries"
+      },
+      "aerobatic_maneuvering": {
+        "aileron_roll": "Aileron roll",
+        "loop": "Loop",
+        "split_s": "Split S",
+        "lazy_eight": "Lazy eight",
+        "cloverleaf": "Cloverleaf",
+        "immelmann": "Immelmann",
+        "barrel_roll": "Barrel roll",
+        "cuban_eight": "Cuban eight"
+      }
+    },
+    "vfr_pattern_operations": {
+      "local_recovery": "Local recovery",
+      "vfr_traffic_entry_lead_single_ship": "VFR traffic entry (lead/single ship)",
+      "rsu_procedures": "RSU procedures",
+      "breakout_reentry": "Breakout/reentry",
+      "normal_overhead": "Normal overhead",
+      "no_flap_overhead": "No-flap overhead",
+      "closed_pattern": "Closed pattern",
+      "vfr_straight_in": "VFR straight-in",
+      "vfr_no_flap_straight_in": "VFR no-flap straight-in",
+      "go_around": "Go-around",
+      "high_altitude_power_loss_hapl_sim_only": "High-altitude power loss (HAPL) (SIM ONLY)",
+      "emergency_landing_pattern_elp": "Emergency landing pattern (ELP)",
+      "elp_landing": "ELP landing"
+    },
+    "navigation": {
+      "instrument_procedures": {
+        "outbase_procedures_flight_only": "Outbase procedures (FLIGHT ONLY)",
+        "gps_navigation": "GPS navigation",
+        "ground_based_navaid_navigation": "Ground based Navaid navigation",
+        "intercept_maintain_course": "Intercept / maintain course",
+        "intercept_maintain_arc": "Intercept / maintain arc",
+        "visual_straight_in": "Visual straight-in",
+        "holding": "Holding",
+        "instrument_approach_vectors": "Instrument approach (vectors)",
+        "instrument_approach_full_procedure": "Instrument approach (full procedure)",
+        "vor_final": "VOR final",
+        "localizer_final": "Localizer final",
+        "gps_final": "GPS final",
+        "ils_final": "ILS final",
+        "par_final": "PAR final",
+        "asr_final": "ASR final",
+        "no_gyro_final": "No-gyro final",
+        "circling_approach": "Circling approach",
+        "missed_approach": "Missed approach",
+        "transition_to_landing": "Transition to landing",
+        "night_transition_to_landing": "Night transition to landing"
+      },
+      "vfr_procedures": {
+        "vfr_departure_non_local": "VFR departure (non-local)",
+        "vfr_navigation": "VFR navigation",
+        "vfr_arrival": "VFR arrival"
+      },
+      "low_level_flight_only": {
+        "route_entry_lead_single_ship_flight_only": "Route entry - lead/single ship (FLIGHT ONLY)",
+        "low_level_time_control_flight_only": "Low level time control (FLIGHT ONLY)",
+        "low_level_course_maintenance_flight_only": "Low level course maintenance (FLIGHT ONLY)",
+        "low_level_chart_reading_flight_only": "Low level chart reading (FLIGHT ONLY)",
+        "route_exit_abort_lead_single_ship_flight_only": "Route exit/abort-lead/single ship (FLIGHT ONLY)"
+      }
+    },
+    "formation_flight_only": {
+      "basic_formation_all_flight_only": {
+        "visual_signals_flight_only": "Visual signals (FLIGHT ONLY)",
+        "position_change_flight_only": "Position change (FLIGHT ONLY)",
+        "flight_split_flight_only": "Flight split (FLIGHT ONLY)",
+        "battle_damage_check_flight_only": "Battle damage check (FLIGHT ONLY)"
+      },
+      "basic_formation_lead_flight_only": {
+        "formation_takeoff_lead_flight_only": "Formation takeoff (lead) (FLIGHT ONLY)",
+        "two_ship_enroute_navigation_lead_flight_only": "2-ship enroute navigation (lead) (FLIGHT ONLY)",
+        "rejoin_lead_flight_only": "Rejoin (lead) (FLIGHT ONLY)",
+        "extended_trail_level_two_lead_flight_only": "Extended trail - level 2 (lead) (FLIGHT ONLY)",
+        "extended_trail_level_three_lead_flight_only": "Extended trail - level 3 (lead) (FLIGHT ONLY)",
+        "wingwork_close_trail_lead_flight_only": "Wingwork / close trail (lead) (FLIGHT ONLY)",
+        "echelon_lead_flight_only": "Echelon (lead) (FLIGHT ONLY)",
+        "lost_wingman_lead_flight_only": "Lost wingman (lead) (FLIGHT ONLY)",
+        "formation_approach_lead_flight_only": "Formation approach (lead) (FLIGHT ONLY)",
+        "formation_landing_lead_flight_only": "Formation landing (lead) (FLIGHT ONLY)"
+      },
+      "basic_formation_wing_flight_only": {
+        "wing_takeoff_wing_flight_only": "Wing takeoff (wing) (FLIGHT ONLY)",
+        "interval_takeoff_wing_flight_only": "Interval takeoff (wing) (FLIGHT ONLY)",
+        "formation_navigation_procedures_wing_flight_only": "Formation navigation procedures (wing) (FLIGHT ONLY)",
+        "fingertip_enroute_wing_flight_only": "Fingertip - enroute (wing) (FLIGHT ONLY)",
+        "wingwork_level_one_and_two_wing_flight_only": "Wingwork - level 1 and 2 (wing) (FLIGHT ONLY)",
+        "wingwork_level_three_wing_flight_only": "Wingwork - level 3 (wing) (FLIGHT ONLY)",
+        "close_trail_wing_flight_only": "Close trail (wing) (FLIGHT ONLY)",
+        "route_wing_flight_only": "Route (wing) (FLIGHT ONLY)",
+        "fighting_wing_wing_flight_only": "Fighting wing (wing) (FLIGHT ONLY)",
+        "echelon_wing_flight_only": "Echelon (wing) (FLIGHT ONLY)",
+        "lost_wingman_wing_flight_only": "Lost wingman (wing) (FLIGHT ONLY)",
+        "crossunder_wing": "Crossunder (wing)",
+        "pitchout_wing_flight_only": "Pitchout (wing) (FLIGHT ONLY)",
+        "turning_rejoin_wing_flight_only": "Turning rejoin (wing) (FLIGHT ONLY)",
+        "straight_ahead_rejoin_wing_flight_only": "Straight-ahead rejoin (wing) (FLIGHT ONLY)",
+        "overshoot_wing_flight_only": "Overshoot (wing) (FLIGHT ONLY)",
+        "breakout_wing_flight_only": "Breakout (wing) (FLIGHT ONLY)",
+        "extended_trail_level_one_wing_flight_only": "Extended trail - level 1 (wing) (FLIGHT ONLY)",
+        "extended_trail_level_two_wing_flight_only": "Extended trail - level 2 (wing) (FLIGHT ONLY)",
+        "extended_trail_level_three_wing_flight_only": "Extended trail - level 3 (wing) (FLIGHT ONLY)",
+        "formation_approach_wing_flight_only": "Formation approach (wing) (FLIGHT ONLY)",
+        "formation_landing_wing_flight_only": "Formation landing (wing) (FLIGHT ONLY)"
+      },
+      "mission_flight_only": {
+        "enroute_rendezvous_tanker_lead_flight_only": "Enroute rendezvous-tanker (lead) (FLIGHT ONLY)",
+        "enroute_rendezvous_receiver_wing_flight_only": "Enroute rendezvous-receiver (wing) (FLIGHT ONLY)"
+      }
+    }
+  }
+}
