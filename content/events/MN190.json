@@ -1,6 +1,6 @@
 {
   "name": "MN190",
-  "phase": "Mission",
+  "phase": "mission",
   "element": "Navigation",
   "title": "Mission Check",
   "category": "Mission",

@@ -1,6 +1,6 @@
 {
   "name": "E2002",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Emergency Procedures Training (Part-Task)",
   "category": "Emergency Procedures",

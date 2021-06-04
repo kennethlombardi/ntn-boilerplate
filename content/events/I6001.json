@@ -1,6 +1,6 @@
 {
   "name": "I6001",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Local Instrument Recoveries (Part-task)",
   "category": "Instrument",

@@ -1,6 +1,6 @@
 {
   "name": "Q6502",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Qualification (RSU Pattern Party)",
   "category": "Qualification",

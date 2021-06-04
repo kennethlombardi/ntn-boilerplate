@@ -1,6 +1,6 @@
 {
   "name": "Q3002",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Composite Maneuvers and Traffic Patterns",
   "category": "Qualification",

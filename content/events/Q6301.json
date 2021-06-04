@@ -1,6 +1,6 @@
 {
   "name": "Q6301",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Qualification (Full Profile)",
   "category": "Qualification",

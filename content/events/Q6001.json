@@ -1,6 +1,6 @@
 {
   "name": "Q6001",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "ITD Orientation",
   "category": "Qualification",

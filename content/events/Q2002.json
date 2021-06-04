@@ -1,6 +1,6 @@
 {
   "name": "Q2002",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Departure, Recovery, and Straight Ins",
   "category": "Qualification",

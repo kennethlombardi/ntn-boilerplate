@@ -1,6 +1,6 @@
 {
   "name": "Q1001",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Basic Control and Performance",
   "category": "Qualification",

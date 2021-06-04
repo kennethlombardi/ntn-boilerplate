@@ -1,6 +1,6 @@
 {
   "name": "Q6207",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Visual Patterns (PilotEdge)",
   "category": "Qualification",

@@ -1,6 +1,6 @@
 {
   "name": "Event",
-  "phase": "Phase",
+  "phase": "phase",
   "element": "Element",
   "title": "Event Title",
   "category": "Category",

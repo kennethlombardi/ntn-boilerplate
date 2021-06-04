@@ -1,6 +1,6 @@
 {
   "name": "I2101",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Basic Instruments – VHF and GPS Approaches",
   "category": "Instrument",

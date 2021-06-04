@@ -1,6 +1,6 @@
 {
   "name": "B2001",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Basic Procedures (Part-task)",
   "category": "Basic",

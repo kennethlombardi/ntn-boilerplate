@@ -1,6 +1,6 @@
 {
   "name": "Q6101",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Local Pattern References and Visual Patterns",
   "category": "Qualification",

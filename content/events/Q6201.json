@@ -1,6 +1,6 @@
 {
   "name": "Q6201",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Local Area Orientation (PilotEdge)",
   "category": "Qualification",

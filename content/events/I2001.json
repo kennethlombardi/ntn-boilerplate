@@ -1,6 +1,6 @@
 {
   "name": "I2001",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Basic Instruments – Local Departures/Recoveries",
   "category": "Instrument",

@@ -1,6 +1,6 @@
 {
   "name": "E6001",
-  "phase": "Preflight",
+  "phase": "preflight",
   "element": "N/A",
   "title": "Emergency Procedures (Part-Task)",
   "category": "Emergency Procedures",
