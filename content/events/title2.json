@@ -14,7 +14,7 @@
     "airmanship": {
       "inflight_adaptability_contingencies": "NONE",
       "ground_operations": "NONE",
-      "strap_in": "NONE",
+      "strap_in_sim_only": "NONE",
       "general_knowledge": "NONE",
       "decision_making": "NONE",
       "emergency_procedures": "NONE",
@@ -51,7 +51,8 @@
         "area_orientation_and_planning": "NONE",
         "vertical_s": "NONE",
         "nose_low_recovery": "NONE",
-        "recovery_from_spin": "NONE",
+        "recovery_from_spin_ocf": "NONE",
+        "inverted_recovery": "NONE",
         "slow_flight": "NONE",
         "unusual_attitude_recoveries": "NONE",
         "power_on_stalls": "NONE",
@@ -78,7 +79,7 @@
       "normal_overhead": "NONE",
       "vfr_straight_in": "NONE",
       "breakout_reentry": "NONE",
-      "emergency_landing_pattern": "NONE",
+      "emergency_landing_pattern_elp": "NONE",
       "vfr_traffic_entry_lead_single_ship": "NONE",
       "high_altitude_power_loss_hapl_sim_only": "NONE",
       "closed_pattern": "NONE"
@@ -131,14 +132,15 @@
         "lost_wingman_lead_flight_only": "NONE",
         "extended_trail_level_two_lead_flight_only": "NONE",
         "echelon_lead_flight_only": "NONE",
-        "formation_takeof_lead_flight_only": "NONE",
+        "formation_takeoff_lead_flight_only": "NONE",
         "formation_landing_lead_flight_only": "NONE",
         "extended_trail_level_three_lead_flight_only": "NONE",
         "two_ship_enroute_navigation_lead_flight_only": "NONE",
         "rejoin_lead_flight_only": "NONE",
         "wingwork_close_trail_lead_flight_only": "NONE"
       },
-      "wing_takeoff_wing_flight_only": {
+      "basic_formation_wing_flight_only": {
+        "wing_takeoff_wing_flight_only": "NONE",
         "extended_trail_level_three_wing_flight_only": "NONE",
         "straight_ahead_rejoin_wing_flight_only": "NONE",
         "wingwork_level_three_wing_flight_only": "NONE",
@@ -163,12 +165,11 @@
       },
       "mission_flight_only": {
         "enroute_rendezvous_tanker_lead_flight_only": "NONE",
-        "enroute_rendezvous_receiver_lead_flight_only": "NONE"
+        "enroute_rendezvous_receiver_wing_flight_only": "NONE"
       }
     }
   },
   "phase": "preflight",
   "element": "transition",
-  "category": "qualification",
-  "milestone_window": "milestone window"
+  "category": "qualification"
 }
