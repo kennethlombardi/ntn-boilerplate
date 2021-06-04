@@ -307,6 +307,12 @@
           "required": false
         },
         {
+          "label": "Milestone Window",
+          "name": "milestone_window",
+          "widget": "string",
+          "required": false
+        },
+        {
           "label": "Maneuvers",
           "name": "maneuvers",
           "widget": "object",
@@ -1652,8 +1658,8 @@
                       "required": true
                     },
                     {
-                      "label": "Inverted recovery",
-                      "name": "inverted_recovery",
+                      "label": "Recovery from spin / OCF",
+                      "name": "recovery_from_spin_ocf",
                       "widget": "select",
                       "default": "NONE",
                       "options": [
@@ -1689,8 +1695,8 @@
                       "required": true
                     },
                     {
-                      "label": "Recovery from spin / OCF",
-                      "name": "recovery_from_spin_ocf",
+                      "label": "Inverted recovery",
+                      "name": "inverted_recovery",
                       "widget": "select",
                       "default": "NONE",
                       "options": [
@@ -2632,7 +2638,7 @@
                   "required": true
                 },
                 {
-                  "label": "Emergency landing pattern (ELP",
+                  "label": "Emergency landing pattern (ELP)",
                   "name": "emergency_landing_pattern_elp",
                   "widget": "select",
                   "default": "NONE",

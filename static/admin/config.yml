@@ -85,7 +85,9 @@ collections:
     format: 'json'
     slug: '{{slug}}'
     preview_path: 'events/{{slug}}'
+    identifier_field: 'name'
     fields:
+      - { label: 'Event Name', name: 'name', widget: 'string', required: true }
       - {
           label: 'Event Phase',
           name: 'phase',
@@ -254,7 +256,7 @@ collections:
             fields:
               - {
                   label: 'Strap in (SIM ONLY)',
-                  name: 'strap_in',
+                  name: 'strap_in_sim_only',
                   widget: 'select',
                   default: 'NONE',
                   options:
@@ -800,8 +802,25 @@ collections:
                       required: true,
                     }
                   - {
-                      label: 'Recovery from spin',
-                      name: 'recovery_from_spin',
+                      label: 'Recovery from spin / OCF',
+                      name: 'recovery_from_spin_ocf',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
+                  - {
+                      label: 'Inverted recovery',
+                      name: 'inverted_recovery',
                       widget: 'select',
                       default: 'NONE',
                       options:
@@ -1235,8 +1254,8 @@ collections:
                   required: true,
                 }
               - {
-                  label: 'Emergency landing pattern (ELP',
-                  name: 'emergency_landing_pattern',
+                  label: 'Emergency landing pattern (ELP)',
+                  name: 'emergency_landing_pattern_elp',
                   widget: 'select',
                   default: 'NONE',
                   options:
@@ -1849,7 +1868,7 @@ collections:
                 fields:
                   - {
                       label: 'Formation takeoff (lead) (FLIGHT ONLY)',
-                      name: 'formation_takeof_lead_flight_only',
+                      name: 'formation_takeoff_lead_flight_only',
                       widget: 'select',
                       default: 'NONE',
                       options:
@@ -2017,11 +2036,28 @@ collections:
                         ],
                       required: true,
                     }
-              - label: 'Wing takeoff (wing) (FLIGHT ONLY)'
-                name: 'wing_takeoff_wing_flight_only'
+              - label: 'Basic Formation (wing) (FLIGHT ONLY)'
+                name: 'basic_formation_wing_flight_only'
                 widget: 'object'
                 collapsed: true
                 fields:
+                  - {
+                      label: 'Wing takeoff (wing) (FLIGHT ONLY)',
+                      name: 'wing_takeoff_wing_flight_only',
+                      widget: 'select',
+                      default: 'NONE',
+                      options:
+                        [
+                          { label: 'NONE', value: 'NONE' },
+                          { label: '2', value: '2' },
+                          { label: '2+', value: '2+' },
+                          { label: '3', value: '3' },
+                          { label: '3+', value: '3+' },
+                          { label: '4', value: '4' },
+                          { label: '4+', value: '4+' },
+                        ],
+                      required: true,
+                    }
                   - {
                       label: 'Interval takeoff (wing) (FLIGHT ONLY)',
                       name: 'interval_takeoff_wing_flight_only',
@@ -2402,8 +2438,8 @@ collections:
                       required: true,
                     }
                   - {
-                      label: 'Enroute rendezvous-receiver (lead) (FLIGHT ONLY)',
-                      name: 'enroute_rendezvous_receiver_lead_flight_only',
+                      label: 'Enroute rendezvous-receiver (wing) (FLIGHT ONLY)',
+                      name: 'enroute_rendezvous_receiver_wing_flight_only',
                       widget: 'select',
                       default: 'NONE',
                       options:
