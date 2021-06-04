@@ -150,6 +150,7 @@
       "format": "json",
       "slug": "{{slug}}",
       "preview_path": "events/{{slug}}",
+      "identifier_field": "name",
       "fields": [
         {
           "label": "Event Name",
